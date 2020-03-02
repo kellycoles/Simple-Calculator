@@ -6,7 +6,22 @@ namespace Simple_Calculator
     {
         static void Main(string[] args)
         {
-          
+            string UserSelection = string.Empty;
+            do
+            {
+                PrintMenu();
+                int UserChoice = Convert.ToInt32(Console.ReadLine());
+                while (UserChoice < 1 || UserChoice > 4)
+                {
+                    Console.WriteLine("Invalid Option. Try again");
+                    PrintMenu();
+                    Console.WriteLine();
+                    UserChoice = Convert.ToInt32(Console.ReadLine());
+                }
+                Calculate(UserChoice);
+
+
+            } while (UserSelection.ToUpper() != "NO");
         }
         public static void PrintMenu()
         {
