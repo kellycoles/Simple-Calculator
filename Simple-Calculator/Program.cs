@@ -32,6 +32,8 @@ namespace Simple_Calculator
                 }
 
             } while (UserSelection.ToUpper() != "NO");
+            Console.WriteLine();
+            Console.WriteLine("The program will now terminate");
         }
         public static void PrintMenu()
         {
