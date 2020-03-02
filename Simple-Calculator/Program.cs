@@ -20,6 +20,16 @@ namespace Simple_Calculator
                 }
                 Calculate(UserChoice);
 
+                Console.WriteLine("Do you want to continue");
+                UserSelection = Console.ReadLine();
+                while (UserSelection.ToUpper() != "NO" &&
+                       UserSelection.ToUpper() != "YES")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Invalid Input - Please type YES or NO");
+                    Console.WriteLine("Do you want to continue");
+                    UserSelection = Console.ReadLine();
+                }
 
             } while (UserSelection.ToUpper() != "NO");
         }
